@@ -1,0 +1,28 @@
+priority_queue<int> aa;
+// max_heap 구성됨
+
+priority_queue<int, vector<int>, std::greater<int> > aa;
+//#include <functional> for greater<int>
+// min_heap 구성됨
+// 3번째에 greater<int> 대신 
+//struct compare
+{
+    bool operator()(const int & a, const int & b)
+    {
+        return a>b;
+    }
+};
+// compare 삽입 가능
+ 
+
+* pair<> 로 할경우
+
+priority_queue<pair<int, int> > aa;
+
+typedef pair<int, int> P;
+
+priority_queue<P, vector<P>, greater<P> > aa;
+// min heap
+
+aa = priority_queue<P, vector<P>, greater<P> >();
+// init
